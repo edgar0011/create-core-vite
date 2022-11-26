@@ -1,6 +1,6 @@
 {
   "name": "create-core-vite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm init, yarn init, template ",
   "main": "index.js",
   "repository": "https://github.com/edgar0011/create-core-vite",
@@ -17,7 +17,6 @@
     "lint:ts:quiet": "eslint cli --ext js,jsx,ts,tsx --quiet",
     "lint:fix": "yarn lint --fix",
     "cli:test": "node ./cli/create-core-vite.js"
-
   },
   "dependencies": {
     "chalk-pipe": "^4.0.0",
