@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "npm init, yarn init, template ",
   "main": "index.js",
-  "repository": "https://github.com/edgar0011/create-vite-app",
+  "repository": "https://github.com/edgar0011/create-core-vite",
   "author": "Martin Weiser",
   "license": "MIT",
   "private": false,
   "bin": {
-    "create-core-vite-app": "cli/create-core-vite-app.js"
+    "create-core-vite": "cli/create-core-vite.js"
   },
   "scripts": {
     "lint": "eslint cli",
@@ -16,7 +16,7 @@
     "lint:quiet": "eslint cli --quiet",
     "lint:ts:quiet": "eslint cli --ext js,jsx,ts,tsx --quiet",
     "lint:fix": "yarn lint --fix",
-    "cli:test": "node ./cli/create-core-vite-app.js"
+    "cli:test": "node ./cli/create-core-vite.js"
 
   },
   "dependencies": {
