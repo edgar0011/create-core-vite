@@ -3,12 +3,15 @@
   "version": "1.0.1",
   "description": "npm init, yarn init, template ",
   "main": "index.js",
-  "repository": "https://github.com/edgar0011/create-core-vite",
   "author": "Martin Weiser",
   "license": "MIT",
   "private": false,
   "bin": {
     "create-core-vite": "cli/create-core-vite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgar0011/create-core-vite.git"
   },
   "scripts": {
     "lint": "eslint cli",
