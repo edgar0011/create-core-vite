@@ -2,13 +2,17 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs')
 
+const fsPromises = fs.promises
+
 const inquirer = require('inquirer')
 const shell = require('shelljs')
 const chalkPipe = require('chalk-pipe')
 
+const pckReplacer = require('./packageJson.replacer').replacer
+
 console.log('chalkPipe', chalkPipe)
 
-let folderName = './__create-vite-app'
+let folderName = 'my-core-vite-app'
 let folderSet = false
 
 if (process.argv.length >= 3) {
@@ -56,6 +60,12 @@ if (folderSet) {
   shell.exec(`git clone https://github.com/edgar0011/core-vite.git ${folderName}`)
 
   shell.cd(folderName)
+
+  const pkg = await fsPromises.readFile('package.json', 'utf8')
+
+  await fsPromises.writeFile('package.json', pckReplacer(pkg, folderName))
+
+  console.log('Package json ', pkg)
 
   // TODO inquirer npm or yarn
   shell.exec(`${answers.installer} install`, { silent: false }, function(code, stdout, stderr) {
