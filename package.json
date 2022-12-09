@@ -1,6 +1,6 @@
 {
   "name": "create-core-vite",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "npm init, yarn init, template ",
   "main": "index.js",
   "author": "Martin Weiser",
