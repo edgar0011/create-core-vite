@@ -23,12 +23,11 @@
   },
   "dependencies": {
     "chalk-pipe": "^4.0.0",
-    "core-my-lib": "^1.0.7",
     "inquirer": "^8.2.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "@earlorg/eslint-config": "^1.4.1"
+    "@earlorg/eslint-config": "^1.4.1",
+    "eslint": "^7.32.0"
   }
 }
