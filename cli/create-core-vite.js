@@ -57,7 +57,7 @@ if (folderSet) {
     fs.mkdirSync(folderName)
   }
 
-  shell.exec(`git clone https://github.com/edgar0011/core-vite.git ${folderName}`)
+  shell.exec(`git clone git@github.com:edgar0011/core-vite.git ${folderName}`)
 
   shell.cd(folderName)
 
