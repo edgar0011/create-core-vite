@@ -15,6 +15,11 @@ console.log('chalkPipe', chalkPipe)
 let folderName = 'my-core-vite-app'
 let folderSet = false
 
+const GIT_REPO_CORE_VITE = 'git@github.com:edgar0011/core-vite.git'
+const GIT_REPO_CORE_VITE_LITE = 'git@github.com:edgar0011/core-vite-lite.git'
+
+let gitRepo = GIT_REPO_CORE_VITE
+
 if (process.argv.length >= 3) {
   folderName = process.argv?.[2]
   folderSet = true
@@ -40,6 +45,16 @@ const prompts = [
       return chalkPipe('blue.bold')(text)
     },
   },
+  {
+    type: 'list',
+    message: () => chalkPipe('green.bold')('Type of app:'),
+    name: 'appType',
+    choices: ['complex', 'lite'],
+    default: 'complex',
+    transformer(text) {
+      return chalkPipe('blue.bold')(text)
+    },
+  },
 ]
 
 if (folderSet) {
@@ -57,7 +72,11 @@ if (folderSet) {
     fs.mkdirSync(folderName)
   }
 
-  shell.exec(`git clone git@github.com:edgar0011/core-vite.git ${folderName}`)
+  if (answers.appType === 'lite') {
+    gitRepo = GIT_REPO_CORE_VITE_LITE
+  }
+
+  shell.exec(`git clone ${gitRepo} ${folderName}`)
 
   shell.cd(folderName)
 
