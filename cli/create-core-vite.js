@@ -93,4 +93,5 @@ if (folderSet) {
     }
     console.log(stdout)
   })
+  shell.exec('rm -rf .git')
 }())
