@@ -1,7 +1,7 @@
 {
   "name": "create-core-vite",
   "version": "1.0.12",
-  "description": "npm init, yarn init, template ",
+  "description": "npm create, yarn create, template ",
   "main": "index.js",
   "author": "Martin Weiser",
   "license": "MIT",
@@ -27,7 +27,6 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "@earlorg/eslint-config": "^1.4.1",
-    "eslint": "^7.32.0"
+    "@earlorg/eslint-config": "^1.5.46"
   }
 }
